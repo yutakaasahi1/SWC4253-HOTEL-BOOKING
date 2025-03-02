@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- link to external stylesheet -->
+    <script src="script.js" defer></script> <!-- link to external script -->
+    <style>
+        /* Center the slideshow images */
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            text-align: center;
+        }
+
+        .mySlides img {
+            width: 1333px;
+            height: 500px;
+            display: inline;
+            margin: auto;
+        }
+
+        /* Style the navigation bar */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333; /* Dark background for navigation */
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 8px 16px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 14px 20px;
+            color: white;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        /* Hover effect for navigation links */
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s ease; /* Smooth hover transition */
+        }
+
+        /* Style the arrows */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Add hover effect for arrows */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Dots styling */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 5px 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation: fade 1.5s ease;
+        }
+
+        @keyframes fade {
+            from { opacity: .4 } 
+            to { opacity: 1 }
+        }
+
+        /* Button styles */
+        .button {
+            background-color: #333; /* Normal background color */
+            color: rgb(255, 255, 255); /* Normal text color */
+            padding: 10px 20px; /* Padding for the button */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth transition */
+            text-decoration: none; /* No underline */
+        }
+
+        /* Hover effect */
+        .button:hover {
+            background-color: rgb(55, 194, 55); /* Darker shade on hover */
+            color: black;
+        }
+
+
+        ul li ul.dropdown li {
+            display: block;
+            text-align: right;
+        }
+
+        ul li ul.dropdown {
+            width: 53%;
+            background: #333;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+            background: #333;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="HOME PAGE HOTEL.HTML"><img src="Reserve/logo.png" width="205" height="64" alt="Logo"></a></li>
+                <li><a href="AboutHotel.html">About Royale Laurent</a></li>
+                <li>
+                    <a href="#">Locations ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="Location_KL.html">Kuala Lumpur  ➥</a></li>
+                        <li><a href="Location_Penang.html">Penang        ➥</a></li>
+                        <li><a href="Location_Bali.html">Bali          ➥</a></li>
+                        <li><a href="Location_Oslo.html">Oslo          ➥</a></li>
+                        <li><a href="Location_SanDiego.html">San Diego     ➥</a></li>
+                    </ul>
+                </li>
+
+                    <li><a href="HotelBooking.html">Booking Now</a></li>
+                <li><a href="ContactHotel.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <h1 style="text-align:center;">Best Locations in San Diego</h1>
+
+        <h2>1. USS Midway Museum</h2>
+        <img src="Reserve/ussmidwaymuseum.jpg" alt="KL" style="width: 50%; height: auto; padding: 4px;" class="img">
+        <p>The USS Midway was the longest-serving aircraft carrier in the 20th century. Named after the climactic 
+            Battle of Midway of June 1942, Midway was built in only 17 months but missed World War II by one week 
+            when commissioned on Sept. 10, 1945. </p>
+
+        <h2>2. San Diego Zoo</h2>
+        <img src="Reserve/SanDiegoZoo.jpg" alt="KL" style="width: 50%; height: auto; padding: 4px;" class="img">
+        <p>The San Diego Zoo is 100 acres in size. It is well known for its lush, naturalistic habitats
+            and unique animal encounters and is home to more than 3,700 rare and endangered animals representing 
+            approximately 660 species and subspecies and a prominent botanical collection with more than 700,000 plants.
+        </p>
+        
+        
+
+
+        <footer>
+            <h2>Royale Laurent</h2>
+            <p>Hotels and Resorts</p>
+        </footer>
+
+    </main>
+</body>
+</html>

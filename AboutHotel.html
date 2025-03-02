@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- LINK TO EXTERNAL STYLESHEET -->
+    <script src="script.js" defer></script> <!-- LINK TO EXTERNAL SCRIPT -->
+    <style>
+        /* CENTER THE SLIDESHOW IMAGES */
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            text-align: center;
+        }
+
+        .mySlides img {
+            width: 1333px;
+            height: 500px;
+            display: inline;
+            margin: auto;
+        }
+
+        /* STYLE THE NAVIGATION BAR */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333; /* DARK BACKGROUND FOR NAVIGATION */
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 8px 16px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 14px 20px;
+            color: white;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        /* HOVER EFFECT FOR NAVIGATION LINKS */
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s ease; /* SMOOTH HOVER TRANSITION */
+        }
+
+        /* STYLE OF THE ARROWS */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5); /* SEMI- TRANSPARENT BACKGROUND */
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* ADD HOVER EFFECT FOR ARROWS */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* DOTS STYLING FOR SLIDE IMAGES */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 5px 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation: fade 1.5s ease;
+        }
+
+        @keyframes fade {
+            from { opacity: .4 } 
+            to { opacity: 1 }
+        }
+
+        /* BUTTON STYLES */
+        .button {
+            background-color: #333; /* Normal background color */
+            color: rgb(255, 255, 255); /* Normal text color */
+            padding: 10px 20px; /* Padding for the button */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth transition */
+            text-decoration: none; /* No underline */
+        }
+
+        /* Hover effect */
+        .button:hover {
+            background-color: rgb(55, 194, 55); /* Darker shade on hover */
+            color: black;
+        }
+
+
+        ul li ul.dropdown li {
+            display: block;
+            text-align: right;
+        }
+
+        ul li ul.dropdown {
+            width: 53%;
+            background: #333;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+            background: #333;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul> <!--NAVIGATION-->
+                <li><a href="HOME PAGE HOTEL.HTML"><img src="Reserve/logo.png" width="205" height="64" alt="Logo"></a></li>
+                <li><a href="AboutHotel.html">About Royale Laurent</a></li>
+                <li>
+                    <a href="#">Locations ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="Location_KL.html">Kuala Lumpur  ➥</a></li>
+                        <li><a href="Location_Penang.html">Penang        ➥</a></li>
+                        <li><a href="Location_Bali.html">Bali          ➥</a></li>
+                        <li><a href="Location_Oslo.html">Oslo          ➥</a></li>
+                        <li><a href="Location_SanDiego.html">San Diego     ➥</a></li>
+                    </ul>
+                </li>
+
+                    <li><a href="HotelBooking.html">Booking Now</a></li>
+                <li><a href="ContactHotel.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        &nbsp;
+        &nbsp;
+        &nbsp; <!--ABOUT US SECTION-->
+        <h2 style="text-align:center;">About Royale Laurent</h2>
+        
+        <p>Welcome to the Royale Laurent Hotel, where the best temporary accommodation is for you and your family. Located in that prime location at Royale Laurent Kuala Lumpur, our hotel offers a quiet and elegant atmosphere for tourists, business travelers, as well as local tourists. Whether you're here for a relaxing vacation or a productive business trip, Royale Laurent ensures an unforgettable stay with world-class amenities, personalized service, and beautifully appointed rooms.</p>
+        <p>At Royale Laurent, we believe in providing more than just accommodation—we offer experiences. From our exquisite dining options to our modern fitness center and invigorating spa, every detail is designed to make your stay exceptional. Discover unparalleled hospitality in a setting that combines modern conveniences with timeless elegance.</p>
+        <p>Let the Royale Laurent Hotel be your second home. We hope to welcome you soon.</p>
+
+
+        <footer>
+            <h2>Royale Laurent</h2>
+            <p>Hotels and Resorts</p>
+        </footer>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('Reserve/Beach1.jpg'); /*Background Image*/
+            background-size: cover; /* MAKE IMAGE COVER THE ENTIRE BACKGROUND*/
+            background-position: center; /* CENTER THE BACKGROUND IMAGE */
+            background-repeat: no-repeat; /* PREVENTS THE IMAGE FROM REPEATING */
+        }
+        .reservation-form {
+            background-color: rgba(255, 255, 255, 0.8); /* TRANSPARENT WHITE BACKGROUND*/
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px; 
+            box-sizing: border-box;
+        }
+        .reservation-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px; 
+        }
+        .reservation-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .reservation-form input,
+        .reservation-form select,
+        .reservation-form textarea,
+        .reservation-form button {
+            width: 100%; 
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px; 
+            box-sizing: border-box; 
+        }
+        .reservation-form button {
+            background-color: #27b427;
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+        }
+        .reservation-form button:hover {
+            background-color: #00ff22; 
+            color: black;
+        }
+
+        
+        @media (max-width: 768px) {
+            .reservation-form {
+                padding: 15px;
+            }
+            .reservation-form h2 {
+                font-size: 20px;
+            }
+            .reservation-form label {
+                font-size: 13px;
+            }
+            .reservation-form input,
+            .reservation-form select,
+            .reservation-form textarea,
+            .reservation-form button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+       
+
+        
+        @media (max-width: 480px) {
+            .reservation-form {
+                padding: 10px;
+            }
+            .reservation-form h2 {
+                font-size: 18px;
+            }
+            .reservation-form label {
+                font-size: 12px;
+            }
+            .reservation-form input,
+            .reservation-form select,
+            .reservation-form textarea,
+            .reservation-form button {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    <h4><a href="HOME PAGE HOTEL.HTML">Back to Home page</a></h4>
+    <form action="process_form.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <label for="phone">Phone Number (e.g.0123456789)</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="location">Location</label>
+        <select id="location" name="location" required>
+            <option value="">Select Location</option>
+            <option value="kuala-lumpur">Royale Laurent Kuala Lumpur,Malaysia</option>
+            <option value="penang">Royale Laurent Penang,Malaysia</option>
+            <option value="bali">Royale Laurent Bali,Indonesia</option>
+            <option value="san-diego">Royale Laurent San Diego,USA</option>
+            <option value="oslo">Royale Laurent Oslo,Norway</option>
+        </select>
+
+        <label for="checkin">Check-in Date</label>
+        <input type="date" id="checkin" name="checkin" required>
+
+        <label for="checkout">Check-out Date</label>
+        <input type="date" id="checkout" name="checkout" required>
+
+        <label for="room">Room Type</label>
+        <select id="room" name="room" required>
+            <option value="single">Single Room</option>
+            <option value="double">Double Room</option>
+            <option value="suite">Suite</option>
+        </select>
+
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+        <label for="requests">Special Requests</label>
+        <textarea id="requests" name="requests" placeholder="Any special requests?" rows="4"></textarea>
+
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+
+</body>
+</html>

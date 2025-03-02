@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- link to external stylesheet -->
+    <script src="script.js" defer></script> <!-- link to external script -->
+    <style>
+        
+        .slideshow-container { /* CENTER THE SLIDESHOW IMAGES */
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            text-align: center;
+        }
+
+        .mySlides img {
+            width: 1333px;
+            height: 500px;
+            display: inline;
+            margin: auto;
+        }
+
+        
+        nav ul { /*STYLE THE NAVIGATION BAR*/
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333; /* DARK BACKGROUND FOR NAVIGATION */
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 8px 16px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 14px 20px;
+            color: white;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        /* HOVER EFFECT FOR NAVIGATION LINKS */
+        nav ul li a:hover {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s ease; /* SMOOTH HOVER TRANSITION */
+        }
+
+        /* STYLE OF THE ARROWS */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5); /* SEMI- TRANSPARENT BACKGROUND */
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* ADD HOVER EFFECT FOR ARROWS */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* DOTS STYLING FOR SLIDE IMAGES */
+        .dot { 
+            height: 15px;
+            width: 15px;
+            margin: 5px 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation: fade 1.5s ease;
+        }
+
+        @keyframes fade {
+            from { opacity: .4 } 
+            to { opacity: 1 }
+        }
+
+        /*BUTTON STYLES */
+        .button {
+            background-color: #333; /* Normal background color */
+            color: rgb(255, 255, 255); /* Normal text color */
+            padding: 10px 20px; /* Padding for the button */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth transition */
+            text-decoration: none; /* No underline */
+        }
+
+        /* HOVER EFFECT */
+        .button:hover {
+            background-color: rgb(55, 194, 55); /* Darker shade on hover */
+            color: black;
+        }
+
+
+        ul li ul.dropdown li {
+            display: block;
+            text-align: right;
+        }
+
+        ul li ul.dropdown {
+            width: 53%;
+            background: #333;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+            background: #333;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul> <!-- NAVIGATION FOR HEADER -->
+                <li><a href="HOME PAGE HOTEL.HTML"><img src="Reserve/logo.png" width="205" height="64" alt="Logo"></a></li>
+                <li><a href="AboutHotel.html">About Royale Laurent</a></li>
+                <li>
+                    <a href="#">Locations ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="Location_KL.html">Kuala Lumpur  ➥</a></li>
+                        <li><a href="Location_Penang.html">Penang        ➥</a></li>
+                        <li><a href="Location_Bali.html">Bali          ➥</a></li>
+                        <li><a href="Location_Oslo.html">Oslo          ➥</a></li>
+                        <li><a href="Location_SanDiego.html">San Diego     ➥</a></li>
+                    </ul>
+                </li>
+
+                    <li><a href="HotelBooking.HTML">Booking Now</a></li>
+                <li><a href="ContactHotel.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slideshow-container">
+            <!-- SLIDES FOR PAGE HOTEL -->
+            <div class="mySlides fade">
+                <img src="Reserve/suasana1.jpg" alt="KL">
+            </div>
+            <div class="mySlides fade">
+                <img src="Reserve/suasana2.jpg" alt="Penang">
+            </div>
+            <div class="mySlides fade">
+                <img src="Reserve/suasana3.jpg." alt="Bali">
+            </div>
+            <div class="mySlides fade">
+                <img src="Reserve/suasana4.jpg" alt="San Diego">
+            </div>
+            <div class="mySlides fade">
+                <img src="Reserve/suasana5.jpg" alt="Oslo">
+            </div>
+
+            <!-- ARROW FOR USER CAN SLIDE PAGE -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- NAVIGATION DOTS FOR USER KNOW PAGE LOCATION -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+
+        <!-- HOTEL SECTION FOR USERS SEE WHAT HOTEL LOOK LIKE  -->
+        <div class="w3-container" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+            <img src="Reserve/KL.jpg" alt="KL" style="width: 50%; height: auto; padding: 4px;">
+            
+            <div style="margin-left: 20px; text-align: left;">
+                <h2>Kuala Lumpur Royale Laurent</h2>
+                <p>Experience luxury and comfort at our beautiful hotel in the heart of Kuala Lumpur city.</p>
+                <p>Book your stay now and enjoy exclusive facilities in Kuala Lumpur ♡</p>
+                <button class="button" onclick="location.href='HotelBooking.html';">
+                    Booking Now
+                </button>
+            </div>
+        </div>
+        
+
+        <!--ADDITIONAL HOTEL SECTIONS -->
+        <div class="w3-container" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+            <img src="Reserve/Penang.jpg" alt="Penang" style="width: 50%; height: auto; padding: 4px;">
+        
+            <div style="margin-left: 20px; text-align: left;">
+                <h2>Penang Royale Laurent</h2>
+                <p>Experience luxury and comfort in our beautiful hotel on the big island of Penang, which</p>
+                <p>has a variety of interesting art.</p>
+                <p>Book your stay now and enjoy exclusive facilities in Penang ♡</p>
+                <button class="button" onclick="location.href='HotelBooking.html';">
+                    Booking Now
+                </button>
+            </div>
+        </div>
+
+        <div class="w3-container" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+            <img src="Reserve/Oslo.jpg" alt="Oslo" style="width: 50%; height: auto; padding: 4px;">
+        
+            <div style="margin-left: 20px; text-align: left;">
+                <h2>Oslo Royale Laurent</h2>
+                <p>Experience luxury and comfort at our beautiful hotel in the heart of Oslo, Norway. Hotel</p>
+                <p>in the main winter countries of the world.</p>
+                <p>Book your stay now and enjoy exclusive facilities in Oslo ♡</p>
+                <button class="button" onclick="location.href='HotelBooking.html';">
+                    Booking Now
+                </button>
+            </div>
+        </div>
+
+        <div class="w3-container" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+            <img src="Reserve/Bali.jpeg" alt="Bali" style="width: 50%; height: auto; padding: 4px;">
+        
+            <div style="margin-left: 20px; text-align: left;">
+                <h2>Bali Royale Laurent</h2>
+                <p>Experience luxury and comfort at our beautiful on the island of Bali that has a variety of</p>
+                <p>local cultures.</p>
+                <p>Book your stay now and enjoy exclusive facilities in Bali ♡</p>
+                <button class="button" onclick="location.href='HotelBooking.html';">
+                    Booking Now
+                </button>
+            </div>
+        </div>
+
+        <div class="w3-container" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+            <img src="Reserve/SanD.jpg" alt="San Diego" style="width: 50%; height: auto; padding: 4px;">
+        
+            <div style="margin-left: 20px; text-align: left;">
+                <h2>San Diego Royale Laurent</h2>
+                <p>Experience and comfort at our beautiful hotel on a beautiful beach in city of California.</p>
+                <p>Book your stay now and enjoy exclusive facilities in San Diego ♡</p>
+                <button class="button" onclick="location.href='HotelBooking.html';">
+                    Booking Now
+                </button>
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            var slideInterval;
+
+            // INITIALIZE SLIDESHOW
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                clearTimeout(slideInterval);  // RESET AUTO-SLIDE WHEN MANUALLY NAVIGATING
+                slideIndex += n;
+
+                // WRAP AROUND SLIDES WHEN REACHING THE END OR BEGINNING
+                var slides = document.getElementsByClassName("mySlides");
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0; // GO TO THE FIRST SLIDE
+                }
+                if (slideIndex < 0) {
+                    slideIndex = slides.length - 1; // GO TO THE LAST SLIDE
+                }
+                showSlides();
+            }
+
+            function currentSlide(n) {
+                clearTimeout(slideInterval);  // RESET AUTO-SLIDE WHEN DOT IS CLICKED
+                slideIndex = n - 1;  
+                showSlides();
+            }
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  // HIDE ALL SLIDES
+                }
+
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+
+                slides[slideIndex].style.display = "block";  // SHOW THE CURRENT SLIDE
+                dots[slideIndex].className += " active";  // HIGHLIGHT THE CURRENT DOT
+
+                // RESTART THE AUTOMATIC SLIDE
+                slideInterval = setTimeout(showSlides, 2000);  // CHANGE SLIDE ANY 2 SECOND
+            }
+
+            // AUTOMATICALLY MOVE TO NEXT SLIDE
+            slideInterval = setTimeout(showSlides, 2000);
+        </script>
+        
+    <!--FOOTER WEBSITE-->
+        <footer>
+            <h2>Royale Laurent</h2>
+            <p>Hotels and Resorts</p>
+        </footer>
+
+
+
+
+
+    </main>
+</body>
+</html>
